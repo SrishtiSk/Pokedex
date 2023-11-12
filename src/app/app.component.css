@@ -1,0 +1,6 @@
+.page-wrapper{
+    height:100vh;
+}
+.disableClicks{
+    pointer-events: none;
+}
