@@ -1,1 +1,47 @@
-<p>pokemon-detail works!</p>
+<div class="col-12" *ngIf="pokemon!==undefined">
+    <br/>
+    <h1 class="text-center text-uppercase Section-heading">{{pokemon.name}}</h1>
+    <div class="justify-content-center text-center">
+        <span style="padding: 4px;" class="genera text-capitalize rounded {{pokemon.color}}">
+        {{pokemon.genus}}</span>
+    </div>
+    <div class="row justify-content-center mx-5 border border-primary">
+        <div class="col border border-secondary">
+                    <div class="row ">
+                        <div class="col-4 text-end fw-bold">ID </div>
+                        <div class="col"># {{pokemon.id}}</div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-4 text-end fw-bold">Height </div>
+                        <div class="col">{{changeMatrix('mts')}}m ({{changeMatrix('fts')}})</div>
+                    </div> <div class="row ">
+                        <div class="col-4 text-end fw-bold">Weight</div>
+                        <div class="col"> {{changeMatrix('kgs')}}kg ({{changeMatrix('lbs')}}lbs)</div>
+                    </div> <div class="row ">
+                        <div class="col-4 text-center fw-bold">Abilities</div>
+                        <div class="col">{{getAbilities()}}</div>
+                    </div> <div class="row ">
+                        <div class="col-4 text-end fw-bold">Type </div>
+                        <div class="col">{{getType()}}</div>
+                    </div> <div class="row ">
+                        <div class="col-4 text-end fw-bold">Forms</div>
+                        <div class="col">{{pokemon.id}}</div>
+                    </div>
+            
+        </div>
+        <div class="col-6  border border-secondary">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.id}}.png" alt="{{pokemon.name}}"
+                  class="img-fluid d-block mx-auto" style="width: 300px;">
+        </div>
+        <div class="col  border border-secondary">
+            <span class="row">HP</span>
+            <span class="row">Attack</span>
+            <span class="row">Sp. Attack</span>
+            <span class="row">Sp. defence</span>
+            <span class="row">Speed</span>
+            <span class="row">Total</span>
+
+        </div>
+    </div>
+    
+</div>

@@ -3,6 +3,8 @@ import { Observable, Subscription, concat, forkJoin } from 'rxjs';
 import { PokemonService } from '../services/pokemon.service';
 import { Pokemon } from '../shared/pokemon.model';
 import { PokemonList } from '../shared/pokemon.list';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
@@ -13,15 +15,18 @@ export class PokemonListComponent {
 
   loading:boolean = false;
   pokeList: Pokemon[]=[];
-
+  
+  
   public offset:number;
 
-  constructor(private pokemonService: PokemonService){
+  constructor(private pokemonService: PokemonService,
+    private router:Router){
     this.offset =0;
   }
 
   ngOnInit():void{
    this.getPokeList();
+   //showSearch = false;
   }
 
   getPokeList(){

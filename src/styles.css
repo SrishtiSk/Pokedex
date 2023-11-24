@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /*pokemon colors based on type*/
+
 :root{
     --grass: #3E9709;
     --grass-light: #7EB95B;
@@ -38,14 +39,15 @@
     --fairy: #FFA0C2;
     --fairy-light: #FDD1E0;
     
+    --gray-light: #d8d8d8;
+    --gray-dark: #606060;
+    --gray: #b6b6b6;
     
-    --gray-light: #d8d8d8
-    --gray-dark: #606060
-    --gray: #b6b6b6
+    --transparent: transparent;
+    --black: #000000;
+    --white: #ffffff;
     
-    --transparent: transparent
-    --black: #000000
-    --white: #ffffff
-    
+    /* colors */
+    --green :#81c784 ;
 }
 

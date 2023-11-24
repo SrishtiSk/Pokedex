@@ -1,5 +1,24 @@
-<nav class="navbar sticky-top navbar-expand bg-light" id="header" [ngClass]="color">
+<nav class="navbar sticky-top navbar-expand" [ngClass]="color" id="header">
 <ul class="navbar-nav mt-2">
-   <li style="list-style: none;"><h1>PokeDex</h1></li>
+   <button type="button" class="btn back-arrow" routerLink="/pokemon" [ngClass]="{'back-arrow-fade': showSearch}"
+   >
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+   </button>
+   <!--search box-->
+   <li class="nav-item search-bar-form" style="display: inline-flex"
+   [ngClass]="{'search-fade':!showSearch}"> 
+      <form>
+         <div class="bg-light rounded rounded-pill shadow-sm align-content-center" style="max-width: 40vw;">
+            <div class="search-bar input-group rounded-pill" style="background-color: #f6f6f6">
+               <input type="text" autocomplete="off" placeholder="Search Pokémon..." name="search"
+                class="form-control border-0 rounded-pill" style="background-color: #f6f6f6"
+              ><!--[(ngModel)]="searchText" (ngModelChange)="typingStopped()"-->
+            </div>
+         </div>
+      </form>
+   </li>
 </ul> 
-</nav>
+   <a class="navbar-brand" data-toggle="modal" data-target="#aboutModal" #menu>PokéDex</a>
+</nav> 

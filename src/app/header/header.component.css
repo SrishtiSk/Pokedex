@@ -1,0 +1,141 @@
+.navbar{
+    background-color: white;
+    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.18);
+    transition: background-color 500ms ease-in,
+    color 500ms ease-in;
+   
+}
+a, button{
+  color: gray;
+  color:inherit;
+  &:hover{
+    color:#2b2b2b;
+    cursor:pointer;
+  }
+}
+
+
+.navbar-brand{
+    font-size: xx-large;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.back-arrow {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+    visibility: visible;
+}
+
+.back-arrow-fade {
+  opacity: 0;
+  visibility: hidden;
+}
+/*searchbar*/
+.search-bar-form{
+  opacity: 1;
+  transition: all 1s;
+  visibility: visible;
+}
+.search-fade{
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*color*/
+.black {
+  background-color: #607d8b ;
+  color: white;
+}
+
+.blue {
+  background-color: #81d4fa ;
+  color: white;
+}
+
+.brown {
+  background-color: #bcaaa4 ;
+  color: white;
+}
+
+.gray {
+  background-color: #a6a6a6 ;
+  color: white;
+}
+
+.green {
+  background-color: #81c784 ;
+  color: white;
+}
+
+.pink {
+  background-color: #f8bbd0 ;
+  color: white;
+}
+
+.purple {
+  background-color: #ad8ee7 ;
+  color: white;
+}
+
+.red {
+  background-color: #ff8a80;
+  color: white;
+}
+
+.white {
+  background-color: #d5dbe1 ;
+  color: dimgray;
+}
+
+.yellow {
+  background-color: #ffd600 ;
+  color: white;
+}
+
+@media(max-width:575px){
+    .navbar{
+        height: 2.5rem;
+    }
+    .nav-link {
+        font-size: 1.0rem;
+        padding-bottom: 0.2rem;
+      }
+    
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+}
+@media (max-width: 316px) {
+    .navbar {
+      height: 2.3rem;
+    }
+  
+    .nav-link {
+      font-size: 0.8rem;
+      padding-bottom: 0.2rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.0rem;
+    }
+  }
+  
+  @media (max-width: 270px) {
+    .navbar {
+      height: 2.0rem;
+    }
+  
+    .nav-link {
+      font-size: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+  
+    .navbar-brand {
+      font-size: 0.9rem;
+    }
+  }
